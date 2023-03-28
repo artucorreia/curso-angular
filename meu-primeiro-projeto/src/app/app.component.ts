@@ -6,8 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public valor: number;
+  
   constructor () {
+    this.valor = 1;
+  }
 
+  add(): number {
+    return this.valor++;
   }
 
   ngDoCheck(): void { 
@@ -25,7 +31,7 @@ export class AppComponent {
   ngAfterViewInit(): void { 
     console.log('ngAfterViewInit');
   }
-  
+
   ngAfterViewChecked(): void { 
     console.log('ngAfterViewChecked');
   }
