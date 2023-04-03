@@ -7,32 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public valor: number;
+  public destruir: boolean;
   
   constructor () {
     this.valor = 1;
+    this.destruir = true;
   }
 
   add(): number {
     return this.valor++;
   }
 
-  ngDoCheck(): void { 
-    console.log('ngDoCheck');
-  }
-
-  ngAfterContentIniti(): void { 
-    console.log('ngAfterContentIniti');
-  }
-
-  ngAfterContentChecked(): void { 
-    console.log('ngAfterContentChecked');
-  }
-
-  ngAfterViewInit(): void { 
-    console.log('ngAfterViewInit');
-  }
-
-  ngAfterViewChecked(): void { 
-    console.log('ngAfterViewChecked');
+  destruirComponente(): void {
+    this.destruir = false;
   }
 }
