@@ -11,4 +11,8 @@ export class TestComponent {
   constructor() {
     this.titulo = 'teste okay';
   }
+
+  save() {
+    console.log('ok');
+  }
 }
