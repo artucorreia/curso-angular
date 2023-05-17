@@ -8,9 +8,17 @@ import { Component } from '@angular/core';
 export class TituloComponent {
   titulo: string;
   subtitulo: string;
+  // disabledButton: boolean;
 
   constructor() {
     this.titulo = 'Título';
     this.subtitulo = 'Subítulo';
+    // this.disabledButton = false;
   }
+
+  // sumir(): void {
+  //   console.log(this.disabledButton)
+  //   this.disabledButton = true;
+  //   console.log(this.disabledButton)
+  // }
 }
