@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'meu-segundo-projeto';
+  titulo: string;
+  arrayTest: string[];
+
+  constructor() {
+    this.titulo = 'testando';
+    this.arrayTest = [];
+  }
+
+  add(): void {
+    this.arrayTest.push('<app-test></app-test>');
+    console.log('ok');
+  }
 }

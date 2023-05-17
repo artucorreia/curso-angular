@@ -13,6 +13,6 @@ export class TestComponent {
   }
 
   save() {
-    console.log('ok');
+    window.document.createElement('app-test');
   }
 }
