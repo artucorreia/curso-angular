@@ -1,2 +1,13 @@
-<h1>Data Binding</h1>
-<p id="container">Olá, me chamo {{nome}} e tenho {{idade}} anos!</p>
+<h2>Interpolation</h2>
+<p>Olá, me chamo {{nome}} e tenho {{idade}} anos!</p>
+<p>{{nome}} tem mais de 18 anos?</p>
+<p>{{idade > 18}}</p>
+<p>Quanto é {{idade}} + 1?</p>
+<p>{{idade + 1}}</p>
+<hr>
+<h2>Propety Binding</h2>
+<button (click)="onOff()">Desabilitar/Habilitar</button>
+<button [disabled]="buttonDisabled">O</button> <br>
+<img [src]="imgSrc" [alt]="imgAlt">
+<hr>
+<h2>Event Binding</h2>
