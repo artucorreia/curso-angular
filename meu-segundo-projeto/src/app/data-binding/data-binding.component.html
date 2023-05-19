@@ -11,3 +11,11 @@
 <img [src]="imgSrc" [alt]="imgAlt">
 <hr>
 <h2>Event Binding</h2>
+<button (click)="alertar('alerta, alerta!')">button 1</button>
+<button (click)="exibirEvento($event)">button 2</button>
+<div (mousemove)="mouseMoveTest($event)" class="container"></div>
+<p>Posição: {{position.x}} - {{position.y}}</p>
+<hr>
+<h2>Two-Way Binding</h2>
+<!-- <input [(ngModel)]="nome">
+{{nome}} -->

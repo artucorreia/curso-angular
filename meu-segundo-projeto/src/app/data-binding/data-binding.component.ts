@@ -11,6 +11,7 @@ export class DataBindingComponent {
   protected imgSrc: string;
   protected imgAlt: string;
   protected buttonDisabled: boolean;
+  protected position: {x: number, y: number};
 
   constructor() {
     this.nome = 'Arthur';
@@ -18,6 +19,7 @@ export class DataBindingComponent {
     this.buttonDisabled = false;
     this.imgSrc = 'https://i.pinimg.com/564x/17/6e/9b/176e9b666a2461b8ed3fef458a64dbb7.jpg';
     this.imgAlt = 'Cenário Pixel Art';
+    this.position = {x: 0, y: 0};
   }
 
   onOff(): boolean {
@@ -28,4 +30,19 @@ export class DataBindingComponent {
     }
   }
 
+  public alertar(msg: string): void {
+    console.log(msg);
+  }
+
+  public exibirEvento(event: MouseEvent): void {
+    console.log(event);
+  }
+
+  public mouseMoveTest(event: MouseEvent): {} {
+    return this.position = 
+    {
+      x: event.offsetX,
+      y: event.offsetY
+    };
+  } 
 }
