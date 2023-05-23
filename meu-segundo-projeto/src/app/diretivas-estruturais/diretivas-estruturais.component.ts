@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class DiretivasEstruturaisComponent {
   protected condition: boolean;
+  protected conditionClick: boolean;
 
   constructor() {
     this.condition = true;
+    this.conditionClick = true;
   }
 
   ngOnInit() {
@@ -20,5 +22,13 @@ export class DiretivasEstruturaisComponent {
         this.condition = true;
       }
     }, 2000);
+  }
+
+  onClick() {
+    if(this.conditionClick) {
+      this.conditionClick = false;
+    } else {
+      this.conditionClick = true;
+    }
   }
 }
