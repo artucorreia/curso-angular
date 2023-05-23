@@ -1,1 +1,4 @@
-<p>diretivas-estruturais works!</p>
+<p *ngIf="condition; else elseBlock">True</p>
+<ng-template #elseBlock>
+    <p>False</p>
+</ng-template>
