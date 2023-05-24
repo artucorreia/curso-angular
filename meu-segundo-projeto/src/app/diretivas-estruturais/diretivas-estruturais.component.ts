@@ -8,10 +8,25 @@ import { Component } from '@angular/core';
 export class DiretivasEstruturaisComponent {
   protected condition: boolean;
   protected conditionClick: boolean;
+  protected list: {nome: string, idade: number}[];
 
   constructor() {
     this.condition = true;
     this.conditionClick = true;
+    this.list = [
+      {
+        nome: 'arthur', 
+        idade: 19
+      }, 
+      {
+        nome: 'lais', 
+      idade: 18
+      },
+      {
+        nome: 'jose', 
+        idade: 21
+      }
+    ];
   }
 
   ngOnInit() {
