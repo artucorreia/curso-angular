@@ -8,23 +8,27 @@ import { Component } from '@angular/core';
 export class DiretivasEstruturaisComponent {
   protected condition: boolean;
   protected conditionClick: boolean;
-  protected list: {nome: string, idade: number}[];
+  protected people: {name: string, age: number}[];
+  newName: string;
+  newAge: number;
 
   constructor() {
     this.condition = true;
     this.conditionClick = true;
-    this.list = [
+    this.newName = '';
+    this.newAge = 0;
+    this.people = [
       {
-        nome: 'arthur', 
-        idade: 19
+        name: 'Arthur', 
+        age: 19
       }, 
       {
-        nome: 'lais', 
-      idade: 18
+        name: 'Laís', 
+        age: 18
       },
       {
-        nome: 'jose', 
-        idade: 21
+        name: 'José', 
+        age: 21
       }
     ];
   }
@@ -39,11 +43,15 @@ export class DiretivasEstruturaisComponent {
     }, 2000);
   }
 
-  onClick() {
+  onClick(): boolean {
     if(this.conditionClick) {
-      this.conditionClick = false;
+      return this.conditionClick = false;
     } else {
-      this.conditionClick = true;
+      return this.conditionClick = true;
     }
+  }
+
+  addPerson() {
+    return this.people.push({name: this.newName, age: this.newAge});
   }
 }

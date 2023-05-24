@@ -8,6 +8,9 @@
 <button (click)="onClick()">Click</button>
 <hr>
 <h2>ngFor</h2>
+<input [(ngModel)]="newName">
+<input type="number" [(ngModel)]="newAge">
+<button (click)="addPerson()">add</button>
 <ul>
-    <li *ngFor="let item of list">{{item.nome}}</li>
+    <li *ngFor="let person of people">{{person.name}}, {{person.age}} anos</li>
 </ul>
