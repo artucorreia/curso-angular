@@ -51,7 +51,17 @@ export class DiretivasEstruturaisComponent {
     }
   }
 
-  addPerson() {
+  addPerson(): number {
     return this.people.push({name: this.newName, age: this.newAge});
+  }
+
+  deletePerson(person: {name: string, age: number}) {
+    // console.log('delete: ', person);
+    // console.log(this.people);
+    // this.people = this.people.filter((element) => { 
+    //   if(element != person) {
+    //     return element;
+    //   }
+    // });
   }
 }
