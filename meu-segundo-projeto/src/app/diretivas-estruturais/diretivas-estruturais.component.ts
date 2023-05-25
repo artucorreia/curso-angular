@@ -55,13 +55,14 @@ export class DiretivasEstruturaisComponent {
     return this.people.push({name: this.newName, age: this.newAge});
   }
 
-  deletePerson(person: {name: string, age: number}) {
-    // console.log('delete: ', person);
-    // console.log(this.people);
-    // this.people = this.people.filter((element) => { 
-    //   if(element != person) {
-    //     return element;
-    //   }
-    // });
+  deletePerson(person: {name: string, age: number}): {}[] {
+    return this.people = this.people.filter((element) => { 
+      // return element.name !== person.name && element.age !== person.age;
+      
+      if(element !== person) {
+        return true;
+      }
+      return false;
+    });
   }
 }
