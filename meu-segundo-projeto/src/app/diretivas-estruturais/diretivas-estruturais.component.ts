@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./diretivas-estruturais.component.scss']
 })
 export class DiretivasEstruturaisComponent {
-  protected condition: boolean;
-  protected conditionClick: boolean;
-  protected people: {name: string, age: number}[];
+  condition: boolean;
+  conditionClick: boolean;
+  people: {name: string, age: number}[];
   newName: string;
   newAge: number;
 
