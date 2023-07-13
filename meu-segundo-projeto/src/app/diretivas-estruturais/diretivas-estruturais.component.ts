@@ -11,6 +11,7 @@ export class DiretivasEstruturaisComponent {
   people: {name: string, age: number}[];
   newName: string;
   newAge: number;
+  result: number;
 
   constructor() {
     this.condition = true;
@@ -31,6 +32,7 @@ export class DiretivasEstruturaisComponent {
         age: 21
       }
     ];
+    this.result = 5;
   }
 
   ngOnInit() {

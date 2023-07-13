@@ -14,3 +14,10 @@
 <ul>
     <li *ngFor="let person of people; let i = index" (click)="deletePerson(i)">[{{i+1}}] {{person.name}}, {{person.age}} anos</li>
 </ul>
+<hr>
+<h2>ngSwitch</h2>
+<div [ngSwitch]="result">
+    <p *ngSwitchCase="1">Primeira opção</p>
+    <p *ngSwitchCase="2">Segunda opção</p>
+    <p *ngSwitchDefault>Opção padrão</p>
+</div>
