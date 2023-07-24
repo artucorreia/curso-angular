@@ -7,13 +7,15 @@ import { TituloComponent } from './titulo/titulo.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
+import { DiretivasAtributoComponent } from './diretivas-atributo/diretivas-atributo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TituloComponent,
     DataBindingComponent,
-    DiretivasEstruturaisComponent
+    DiretivasEstruturaisComponent,
+    DiretivasAtributoComponent
   ],
   imports: [
     BrowserModule,

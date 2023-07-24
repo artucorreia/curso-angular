@@ -1,0 +1,8 @@
+<h2>ngClass</h2>
+<p [ngClass]="'active'">texto1</p>
+<p [ngClass]="{'active': false, 'disabled': true}">texto3</p>
+<p [ngClass]="{'active': valor, 'disabled': !valor}">texto2</p>
+<hr>
+<h2>ngStyle</h2>
+<p [ngStyle]="{'width': widthValue, 'background-color': 'purple'}">coisas leves</p>
+<p [ngStyle]="{'height': heightValue, 'font-family': 'monospace', 'background-color': 'purple'}">coisas leves</p>
