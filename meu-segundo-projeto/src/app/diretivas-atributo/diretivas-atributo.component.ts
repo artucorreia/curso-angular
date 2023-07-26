@@ -7,13 +7,17 @@ import { Component } from '@angular/core';
 })
 export class DiretivasAtributoComponent {
   public valor: boolean;
-  public widthValue: string;
   public heightValue: string;
+  public widthValue: string;
+  public newName: string;
+  public list: {name: string}[];
 
   constructor() {
     this.valor = true;
-    this.widthValue = '280px';
-    this.heightValue = '20px';
+    this.heightValue = '60px';
+    this.widthValue = '100px';
+    this.newName = '';
+    this.list = []
   }
 
   ngOnInit() {
@@ -24,11 +28,19 @@ export class DiretivasAtributoComponent {
         this.valor = true;
       }
 
-      if(this.heightValue == '20px') {
-        this.heightValue = '50px';
+      if(this.widthValue == '100px') {
+        this.widthValue = '150px';
       } else {
-        this.heightValue = '20px';
+        this.widthValue = '100px';
       }
     },2000);
   }
+
+  addNewItem(name: string) {
+    this.list.push({name: name});
+    this.clearInput();
+  }
+
+  clearInput() { this.newName = ''; }
+  
 }

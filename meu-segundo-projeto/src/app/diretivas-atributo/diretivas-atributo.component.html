@@ -4,5 +4,12 @@
 <p [ngClass]="{'active': valor, 'disabled': !valor}">texto2</p>
 <hr>
 <h2>ngStyle</h2>
-<p [ngStyle]="{'width': widthValue, 'background-color': 'purple'}">coisas leves</p>
-<p [ngStyle]="{'height': heightValue, 'font-family': 'monospace', 'background-color': 'purple'}">coisas leves</p>
+<p [ngStyle]="{'height': heightValue, 'background-color': 'purple'}">coisas leves</p>
+<p [ngStyle]="{'width': widthValue, 'font-family': 'monospace', 'background-color': 'purple'}">coisas leves</p>
+<hr>
+<h2>ngModel</h2>
+<input type="text" [(ngModel)]="newName"> <br>
+<button (click)="addNewItem(newName)">adicionar</button>
+<ul>
+    <li *ngFor="let item of list">{{item.name}}</li>
+</ul>
