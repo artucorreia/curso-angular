@@ -1,14 +1,12 @@
-<div *ngIf="newName != 'stop'">
-    <h2>ngClass</h2>
-    <p [ngClass]="'active'">texto1</p>
-    <p [ngClass]="{'active': false, 'disabled': true}">texto3</p>
-    <p [ngClass]="{'active': valor, 'disabled': !valor}">texto2</p>
-    <hr>
-    <h2>ngStyle</h2>
-    <p [ngStyle]="{'height': heightValue, 'background-color': 'purple'}">coisas leves</p>
-    <p [ngStyle]="{'width': widthValue, 'font-family': 'monospace', 'background-color': 'purple'}">coisas leves</p>
-    <hr>
-</div>
+<h2>ngClass</h2>
+<p [ngClass]="'active'">texto1</p>
+<p [ngClass]="{'active': false, 'disabled': true}">texto3</p>
+<p [ngClass]="{'active': valor, 'disabled': !valor}">texto2</p>
+<hr>
+<h2>ngStyle</h2>
+<p [ngStyle]="{'height': heightValue, 'background-color': 'purple'}">coisas leves</p>
+<p [ngStyle]="{'width': widthValue, 'font-family': 'monospace', 'background-color': 'purple'}">coisas leves</p>
+<hr>
 <h2>ngModel</h2>
 <input type="text" [(ngModel)]="newName"> <br>
 <button (click)="addNewItem(newName)">adicionar</button>
