@@ -1,4 +1,4 @@
-<h2>ngClass</h2>
+<!-- <h2>ngClass</h2>
 <p [ngClass]="'active'">texto1</p>
 <p [ngClass]="{'active': false, 'disabled': true}">texto3</p>
 <p [ngClass]="{'active': valor, 'disabled': !valor}">texto2</p>
@@ -8,8 +8,18 @@
 <p [ngStyle]="{'width': widthValue, 'font-family': 'monospace', 'background-color': 'purple'}">coisas leves</p>
 <hr>
 <h2>ngModel</h2>
-<input type="text" [(ngModel)]="newName"> <br>
+<input type="text" [(ngModel)]="newName">
 <button (click)="addNewItem(newName)">adicionar</button>
 <ul>
     <li *ngFor="let item of list">{{item.name}}</li>
 </ul>
+<hr> -->
+<hr>
+<ng-template [ngIf]="true">
+    <p>coisas leves</p>
+</ng-template>
+<input type="text" [(ngModel)]="newName">
+<button (click)="addNewItem(newName)">adicionar</button>
+<ng-template ngFor let-item [ngForOf]="list">
+    <p>{{item.name}}</p>
+</ng-template>
