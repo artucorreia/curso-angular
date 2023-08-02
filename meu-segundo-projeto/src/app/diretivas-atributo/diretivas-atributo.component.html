@@ -26,4 +26,9 @@
 </ng-template>
 <ng-content select="hr"></ng-content> -->
 <h2>Pipes</h2>
-<p>{{date | date:'dd/MM/yyyy'}}</p>
+<p>{{date | date:'dd/MM/y'}}</p> <!-- ou 'shortDate' -->
+<p>{{date | date: 'd MMMM, y'}}</p> <!-- ou 'longDate' -->
+<p>{{date | date: 'shortTime'}}</p> <!-- ou 'h:mm a' -->
+<p>{{'chocolate' | uppercase}}</p>
+<p>{{'37' | number}}</p>
+<p>{{0.53 | percent}}</p>
