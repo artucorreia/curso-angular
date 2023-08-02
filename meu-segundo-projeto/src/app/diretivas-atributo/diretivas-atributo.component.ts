@@ -11,6 +11,7 @@ export class DiretivasAtributoComponent {
   public widthValue: string;
   public newName: string;
   public list: {name: string}[];
+  public date: Date;
 
   constructor() {
     this.valor = true;
@@ -18,6 +19,7 @@ export class DiretivasAtributoComponent {
     this.widthValue = '100px';
     this.newName = '';
     this.list = []
+    this.date = new Date();
   }
 
   ngOnInit() {
