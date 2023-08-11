@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public value: number;
 
+  constructor() {
+    this.value = 0;
+  }
+
+  addInValue(): number { return this.value++; }
 }
