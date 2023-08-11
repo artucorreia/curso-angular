@@ -6,8 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent {
-  @Input() public count: number;
-  constructor() {
-    this.count = 0;
-  }
+  @Input() public count = 0;
+
+  constructor() { }
 }
