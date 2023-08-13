@@ -7,5 +7,10 @@
 </app-diretivas-atributo> -->
 <!-- <app-input [count]="value"></app-input>
 <button (click)="addInValue()">ADD</button> -->
-<app-output></app-output>
+<ng-template [ngIf]="getDados">
+    <h1>
+        {{getDados.name}} - {{getDados.age}}
+    </h1>
+</ng-template>
+<app-output (sharedDados)="setDados($event)"></app-output>
 <router-outlet></router-outlet>

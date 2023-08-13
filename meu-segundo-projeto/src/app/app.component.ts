@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public value = 0;
+  public getDados: {name: string, age: number} | undefined;
 
   constructor() { }
 
   addInValue(): number { return this.value++; }
+  setDados(event: {name: string, age: number}) {
+    this.getDados = event;
+  }
 }
