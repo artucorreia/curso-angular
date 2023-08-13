@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
 import { DiretivasAtributoComponent } from './diretivas-atributo/diretivas-atributo.component';
 import { InputComponent } from './shared/input/input.component';
+import { OutputComponent } from './shared/output/output.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { InputComponent } from './shared/input/input.component';
     DataBindingComponent,
     DiretivasEstruturaisComponent,
     DiretivasAtributoComponent,
-    InputComponent
+    InputComponent,
+    OutputComponent
   ],
   imports: [
     BrowserModule,
