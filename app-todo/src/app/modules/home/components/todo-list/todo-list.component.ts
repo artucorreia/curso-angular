@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./todo-list.component.scss']
 })
 export class TodoListComponent {
-
+  public hasTask = true;
 }

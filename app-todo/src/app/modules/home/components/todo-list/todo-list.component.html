@@ -1,5 +1,6 @@
 <section>
-    <ul >
+    <img *ngIf="!hasTask" src="../../../../../assets/img/bg-task.png" alt="background área tarefas">
+    <ul *ngIf="hasTask">
         <li>
             <input type="checkbox">
             <input type="text">
