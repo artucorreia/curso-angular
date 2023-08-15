@@ -1,9 +1,9 @@
 <section>
     <img *ngIf="!hasTask" src="../../../../../assets/img/bg-task.png" alt="background área tarefas">
     <ul *ngIf="hasTask">
-        <li>
+        <li >
             <input type="checkbox">
-            <input type="text">
+            <input type="text" [value]="test">
 
             <button>
                 <img src="../../../../../assets/icons/icon-trash.svg" alt="botão para apagar tarefa">
