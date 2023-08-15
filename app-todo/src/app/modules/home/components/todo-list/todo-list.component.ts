@@ -7,8 +7,6 @@ import { Task } from '../../model/task';
   styleUrls: ['./todo-list.component.scss']
 })
 export class TodoListComponent {
-  public hasTask = true;
-  public test = 'coisas leves';
   public taskList: Task[];
 
   constructor () { 
