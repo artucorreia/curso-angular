@@ -1,32 +1,14 @@
-<section>
-    <img *ngIf="!hasTask" src="../../../../../assets/img/bg-task.png" alt="background área tarefas">
-    <ul *ngIf="hasTask">
-        <li >
-            <input type="checkbox">
-            <input type="text" [value]="test">
+<section [ngClass]="{'loading': !taskList.length}">
+    <ul *ngIf="taskList.length">
+        <li *ngFor="let task of taskList; let i = index;">
+            <input type="checkbox" [(ngModel)]="task.status">
+            <input type="text" [(ngModel)]="task.name" [ngClass]="{'checked': task.status}">
 
-            <button>
-                <img src="../../../../../assets/icons/icon-trash.svg" alt="botão para apagar tarefa">
-            </button>
-        </li>
-        <li>
-            <input type="checkbox">
-            <input type="text" class="checked">
-
-            <button>
-                <img src="../../../../../assets/icons/icon-trash.svg" alt="botão para apagar tarefa">
-            </button>
-        </li>
-        <li>
-            <input type="checkbox">
-            <input type="text">
-
-            <button>
+            <button (click)="deleteTask(i)">
                 <img src="../../../../../assets/icons/icon-trash.svg" alt="botão para apagar tarefa">
             </button>
         </li>
     </ul>
 </section>
-
 <app-todo-input-add-items></app-todo-input-add-items>
 <app-todo-button-delete-all></app-todo-button-delete-all>

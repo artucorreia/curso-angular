@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { Task } from './interfaceTask';
+import { Task } from '../../model/task';
 
 @Component({
   selector: 'app-todo-list',
@@ -9,37 +9,18 @@ import { Component } from '@angular/core';
 export class TodoListComponent {
   public hasTask = true;
   public test = 'coisas leves';
+  public taskList: Task[];
+
   constructor () { 
-
+    this.taskList = [
+      {name: 'almoçar', status: false},
+      {name: 'jantar', status: false},
+      {name: 'estudar', status: false}
+    ];
   }
 
-  ngOnInit(): managerTask {
-    return new managerTask();
-  }
-  
-  teste(name: string) {
-    
-  }
-}
-
-export class Task {
-  name: string;
-  status: boolean;
-  
-  constructor(name: string) {
-    this.name = name;
-    this.status = false;
-  }
-}
-
-export class managerTask {
-  public tasks: Task[];
-
-  constructor() { 
-    this.tasks = [];
-  }
-  
-  addTask(name: string): {} {
-    return this.tasks.push(new Task(name));
+  deleteTask(i: number): void {
+    this.taskList.splice(i, 1);
+    console.log(this.taskList)
   }
 }
