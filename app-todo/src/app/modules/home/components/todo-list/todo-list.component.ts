@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Task } from '../../model/task';
 
 @Component({
@@ -10,15 +10,15 @@ export class TodoListComponent {
   public taskList: Task[];
 
   constructor () { 
-    this.taskList = [
-      {name: 'almoçar', status: false},
-      {name: 'jantar', status: false},
-      {name: 'estudar', status: false}
-    ];
+    this.taskList = [];
+  }
+
+  setNewTask(event: Task): void {
+    this.taskList.push(event);
   }
 
   deleteTask(i: number): void {
     this.taskList.splice(i, 1);
-    console.log(this.taskList)
+    // console.log(this.taskList)
   }
 }
