@@ -5,14 +5,12 @@ import { CommonModule } from '@angular/common';
 import { NewComponentComponent } from './new-component/new-component.component';
 import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
-import { FoodAddComponent } from './food-add/food-add.component';
 
 @NgModule({
   declarations: [
     NewComponentComponent,
     InputComponent,
     OutputComponent,
-    FoodAddComponent
   ],
   imports: [
     CommonModule
