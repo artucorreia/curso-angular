@@ -16,8 +16,4 @@ export class FoodListComponent {
   ngOnInit() {
     this.foodList = this.foodListService.foodList();
   }
-
-  // addNewFood(newFood: string) {
-    // this.foodList = this.foodListService.addNewFood(newFood);
-  // }
 }

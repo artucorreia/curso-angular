@@ -11,6 +11,7 @@ import { DiretivasAtributoComponent } from './diretivas-atributo/diretivas-atrib
 import { InputComponent } from './shared/input/input.component';
 import { OutputComponent } from './shared/output/output.component';
 import { FoodListComponent } from './shared/food-list/food-list.component';
+import { FoodAddComponent } from './shared/food-add/food-add.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FoodListComponent } from './shared/food-list/food-list.component';
     DiretivasAtributoComponent,
     InputComponent,
     OutputComponent,
-    FoodListComponent
+    FoodListComponent,
+    FoodAddComponent
   ],
   imports: [
     BrowserModule,
