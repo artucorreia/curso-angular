@@ -18,9 +18,12 @@ export class FoodListService {
 
   public foodList(): string[] { return this.list; }
 
-  public addNewFood(newFood: string): string[] | number { return this.list.push(newFood); }
+  public addNewFood(newFood: string): string[] | number { 
+    this.foodListAlert(newFood);
+    return this.list.push(newFood); 
+  }
 
-  public eventAlert() {
-    
+  public foodListAlert(value: string) {
+    this.emitEvent.emit(value);
   }
 }
