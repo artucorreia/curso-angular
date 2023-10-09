@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Event } from '@angular/router';
+import { Observable } from 'rxjs';
+import { FoodList } from '../module/food-list';
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +17,17 @@ export class FoodListService {
     'ovo'
   ];
 
-  constructor() { }
+  private url: string = 'http://localhost:3000/';
 
-  public foodList(): string[] { return this.list; }
+  constructor(private http: HttpClient) { }
 
-  // http://localhost:3000/list-food
+  public foodList(): Observable<FoodList[]> { 
+    console.log(this.url + 'list-food')
+    return this.http.get<Array<FoodList>>(`${this.url}list-food`).pipe(
+      res => res,
+      error => error
+    )
+  }
 
   public addNewFood(newFood: string): string[] | number { 
     this.foodListAlert(newFood);

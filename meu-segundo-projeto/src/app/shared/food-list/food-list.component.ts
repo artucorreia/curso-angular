@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FoodList } from 'src/app/module/food-list';
 import { FoodListService } from 'src/app/services/food-list.service';
 
 @Component({
@@ -8,14 +9,18 @@ import { FoodListService } from 'src/app/services/food-list.service';
 })
 export class FoodListComponent {
   
-  public foodList: string[] = [];
+  public foodList: FoodList | any;
 
   constructor(private foodListService: FoodListService) {}
 
   ngOnInit(): void {
-    this.foodList = this.foodListService.foodList();
+    this.foodListService.foodList().subscribe({
+      next: res => this.foodList = res,
+      error: error => console.log(error)
+    });
+
     this.foodListService.emitEvent.subscribe({
       next: (res: string) => console.log(res)
-    })
+    });
   }
 }

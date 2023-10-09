@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 // Components
 import { NewComponentComponent } from './new-component/new-component.component';
@@ -13,7 +14,8 @@ import { OutputComponent } from './output/output.component';
     OutputComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [
     InputComponent,

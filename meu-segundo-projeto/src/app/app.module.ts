@@ -12,6 +12,9 @@ import { InputComponent } from './shared/input/input.component';
 import { OutputComponent } from './shared/output/output.component';
 import { FoodListComponent } from './shared/food-list/food-list.component';
 import { FoodAddComponent } from './shared/food-add/food-add.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FoodListService } from './services/food-list.service';
+
 
 @NgModule({
   declarations: [
@@ -28,9 +31,10 @@ import { FoodAddComponent } from './shared/food-add/food-add.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FoodListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
