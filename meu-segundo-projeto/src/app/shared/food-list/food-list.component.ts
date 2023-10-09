@@ -9,7 +9,6 @@ import { FoodListService } from 'src/app/services/food-list.service';
 export class FoodListComponent {
   
   public foodList: string[] = [];
-  public newFood: string = 'qiwi';
 
   constructor(private foodListService: FoodListService) {}
 

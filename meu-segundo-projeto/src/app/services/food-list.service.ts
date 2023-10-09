@@ -18,6 +18,8 @@ export class FoodListService {
 
   public foodList(): string[] { return this.list; }
 
+  // http://localhost:3000/list-food
+
   public addNewFood(newFood: string): string[] | number { 
     this.foodListAlert(newFood);
     return this.list.push(newFood); 

@@ -1,0 +1,19 @@
+{
+    "list-food": [
+        { 
+            "id": 1, 
+            "title": "X Bacon", 
+            "price": 26
+        },
+        { 
+            "id": 2, 
+            "title": "X Frango",
+            "price": 22.50 
+        },
+        { 
+            "id": 3, 
+            "title": "Passaporte",
+            "price": 18.50
+        }
+    ]
+}
