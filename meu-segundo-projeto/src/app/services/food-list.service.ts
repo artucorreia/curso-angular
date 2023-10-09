@@ -24,6 +24,6 @@ export class FoodListService {
   }
 
   public foodListAlert(value: string) {
-    this.emitEvent.emit(value);
+    return this.emitEvent.emit(value);
   }
 }

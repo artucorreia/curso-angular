@@ -13,7 +13,10 @@ export class FoodListComponent {
 
   constructor(private foodListService: FoodListService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.foodList = this.foodListService.foodList();
+    this.foodListService.emitEvent.subscribe({
+      next: (res: string) => console.log(res)
+    })
   }
 }
