@@ -22,11 +22,7 @@ export class FoodListService {
   constructor(private http: HttpClient) { }
 
   public foodList(): Observable<FoodList[]> { 
-    console.log(this.url + 'list-food')
-    return this.http.get<Array<FoodList>>(`${this.url}list-food`).pipe(
-      res => res,
-      error => error
-    )
+    return this.http.get<Array<FoodList>>(`${this.url}list-food`);
   }
 
   public addNewFood(newFood: string): string[] | number { 
