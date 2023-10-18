@@ -1,19 +1,24 @@
 {
-    "list-food": [
-        { 
-            "id": 1, 
-            "name": "X Bacon", 
-            "price": 26
-        },
-        { 
-            "id": 2, 
-            "name": "X Frango",
-            "price": 22.50 
-        },
-        { 
-            "id": 3, 
-            "name": "Passaporte",
-            "price": 18.50
-        }
-    ]
+  "list-food": [
+    {
+      "id": 1,
+      "name": "X Bacon",
+      "price": 26
+    },
+    {
+      "id": 2,
+      "name": "X Frango",
+      "price": 22.5
+    },
+    {
+      "id": 3,
+      "name": "Passaporte",
+      "price": 18.5
+    },
+    {
+      "name": "Sanduíche natural",
+      "price": 7.5,
+      "id": 4
+    }
+  ]
 }

@@ -9,16 +9,16 @@ import { FoodListService } from 'src/app/services/food-list.service';
 })
 export class FoodListComponent {
   
-  public foodList: FoodList | any;
+  public foodList: FoodList[] = [];
 
   constructor(private foodListService: FoodListService) {}
 
   ngOnInit(): void {
-    // this.foodListService.foodList().subscribe({
-    //   next: res => this.foodList = res,
-    //   error: error => console.log(error)
-    // });
-    this.foodListService.foodList().subscribe((foodList) => this.foodList = foodList);
+    // this.foodListService.foodList().subscribe((foodList) => this.foodList = foodList);
+    this.foodListService.foodList().subscribe({
+      next: (foodList) => this.foodList = foodList,
+      error: error => console.log(error)
+    });
 
     this.foodListService.emitEvent.subscribe({
       next: (res: string) => console.log(res)

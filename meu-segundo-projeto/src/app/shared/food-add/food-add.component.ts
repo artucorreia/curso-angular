@@ -12,7 +12,10 @@ export class FoodAddComponent {
   
   constructor(private foodListService: FoodListService) {}
 
-  public addNewFood(newFood: string): string[] | number {
-    return this.foodListService.addNewFood(newFood);
+  public addNewFood(newFood: string, priceNewFood: string | number) {
+    return this.foodListService.addNewFood(newFood, Number(priceNewFood)).subscribe({
+      next: res => console.log(res),
+      error: error => console.log(error)
+    });
   }
 }

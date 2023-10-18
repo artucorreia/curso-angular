@@ -22,12 +22,20 @@ export class FoodListService {
   constructor(private http: HttpClient) { }
 
   public foodList(): Observable<FoodList[]> { 
-    return this.http.get<Array<FoodList>>(`${this.url}list-food`);
+    return this.http.get<FoodList[]>(`${this.url}list-food`).pipe(
+      res => res,
+      error => error
+    );
   }
 
-  public addNewFood(newFood: string): string[] | number { 
-    this.foodListAlert(newFood);
-    return this.list.push(newFood); 
+  public addNewFood(newFood: string, priceNewFood: number): Observable<FoodList> { 
+    return this.http.post<FoodList>(`${this.url}list-food`, {
+      name: newFood,
+      price: priceNewFood,
+    }).pipe(
+      res => res,
+      error => error
+    );
   }
 
   public foodListAlert(value: string) {
