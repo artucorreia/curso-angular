@@ -14,7 +14,6 @@ export class FoodListComponent {
   constructor(private foodListService: FoodListService) {}
 
   ngOnInit(): void {
-    // this.foodListService.foodList().subscribe((foodList) => this.foodList = foodList);
     this.foodListService.foodList().subscribe({
       next: (foodList) => this.foodList = foodList,
       error: error => console.log(error)
