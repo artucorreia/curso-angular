@@ -23,4 +23,11 @@ export class FoodListComponent {
       next: (res: string) => console.log(res)
     });
   }
+
+  testeEdit(id: number ,newName: string) {
+    this.foodListService.editFood(id, newName).subscribe({
+      next: res => console.log(res),
+      error: error => console.log(error)
+    })
+  }
 }
