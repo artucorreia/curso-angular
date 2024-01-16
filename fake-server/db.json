@@ -1,7 +1,8 @@
 {
   "list-food": [
     {
-      "price": "Sanduíche Natural",
+      "name": "Sanduiche Natural",
+      "price": "12.50",
       "id": 1
     },
     {

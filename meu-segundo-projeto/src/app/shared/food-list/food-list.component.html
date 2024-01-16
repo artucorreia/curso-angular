@@ -1,5 +1,10 @@
 <ul>
     <li *ngFor="let food of foodList">
-        [{{food.id}}] - <input type="text" [(ngModel)]="food.name" (keyup)="testeEdit(food.id, food.name)"> | R${{food.price}}
+        [{{food.id}}] - {{food.name}} | R${{food.price}}
     </li>
 </ul>
+<!-- <ul>
+    <li *ngFor="let food of foodList">
+        [{{food.id}}] - <input type="text" [(ngModel)]="food.name" (keyup)="testeEdit(food.id, food.name)"> | R${{food.price}}
+    </li>
+</ul> -->
