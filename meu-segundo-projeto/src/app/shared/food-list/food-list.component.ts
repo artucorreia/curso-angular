@@ -40,7 +40,7 @@ export class FoodListComponent {
           }
         )
       },
-      error: error => console.log(error)
+      error: error => error
     });
   }
 }

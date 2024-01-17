@@ -14,6 +14,7 @@ import { FoodListComponent } from './shared/food-list/food-list.component';
 import { FoodAddComponent } from './shared/food-add/food-add.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FoodListService } from './services/food-list.service';
+import { FormsComponent } from './forms/forms.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FoodListService } from './services/food-list.service';
     InputComponent,
     OutputComponent,
     FoodListComponent,
-    FoodAddComponent
+    FoodAddComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
