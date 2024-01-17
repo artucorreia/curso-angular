@@ -1,18 +1,18 @@
 {
   "list-food": [
     {
-      "name": "Sanduiche Natural",
-      "price": "12.50",
+      "name": "X Salada",
+      "price": 12,
       "id": 1
     },
     {
-      "name": "X salada",
-      "price": 15,
+      "name": "X frango",
+      "price": 16,
       "id": 2
     },
     {
-      "name": "gh",
-      "price": 7,
+      "name": "X bacon",
+      "price": 18,
       "id": 3
     }
   ]

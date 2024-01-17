@@ -24,10 +24,23 @@ export class FoodListComponent {
     });
   }
 
-  // testeEdit(id: number ,newName: string) {
-  //   this.foodListService.editFood(id, newName).subscribe({
-  //     next: res => console.log(res),
-  //     error: error => console.log(error)
-  //   })
-  // }
+  public editFood(id: number, newFoodName: string, foodPrice: number) {
+    return this.foodListService.editFood(id, newFoodName, foodPrice).subscribe({
+      next: res => res,
+      error: error => error
+    });
+  }
+
+  public deleteFood(id: number) {
+    return this.foodListService.deleteFood(id).subscribe({
+      next: res => {
+        this.foodList = this.foodList.filter(
+          food => {
+            return id !== food.id
+          }
+        )
+      },
+      error: error => console.log(error)
+    });
+  }
 }

@@ -22,7 +22,7 @@ export class FoodListService {
     );
   }
 
-  public addNewFood(foodName: string, foodPrice: number) {
+  public addNewFood(foodName: string, foodPrice: number): Observable<FoodList> {
     return this.http.post<FoodList>(`${this.url}list-food`, {
       name: foodName,
       price: foodPrice
@@ -32,8 +32,15 @@ export class FoodListService {
     );
   }
 
-  public editFood(id: number, newName: string): Observable<FoodList> { 
-    return this.http.put<FoodList>(`${this.url}list-food/${id}`, {price: newName}).pipe(
+  public editFood(id: number, newName: string, price: number): Observable<FoodList> {
+    return this.http.put<FoodList>(`${this.url}list-food/${id}`, {name: newName, price: price}).pipe(
+      res => res,
+      error => error
+    );
+  }
+
+  public deleteFood(id: number): Observable<FoodList> {
+    return this.http.delete<FoodList>(`${this.url}list-food/${id}`).pipe(
       res => res,
       error => error
     );

@@ -1,10 +1,9 @@
 <ul>
     <li *ngFor="let food of foodList">
-        [{{food.id}}] - {{food.name}} | R${{food.price}}
+        [{{food.id}}] - 
+        <input type="text" [(ngModel)]="food.name" (keyup.enter)="editFood(food.id, food.name, food.price)"> 
+        | 
+        R${{food.price}} 
+        <button (click)="deleteFood(food.id)">Delete</button>
     </li>
 </ul>
-<!-- <ul>
-    <li *ngFor="let food of foodList">
-        [{{food.id}}] - <input type="text" [(ngModel)]="food.name" (keyup)="testeEdit(food.id, food.name)"> | R${{food.price}}
-    </li>
-</ul> -->
