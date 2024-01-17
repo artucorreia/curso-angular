@@ -32,8 +32,11 @@ export class FoodListService {
     );
   }
 
-  public editFood(id: number, newName: string, price: number): Observable<FoodList> {
-    return this.http.put<FoodList>(`${this.url}list-food/${id}`, {name: newName, price: price}).pipe(
+  public editFood(food: FoodList): Observable<FoodList> {
+    return this.http.put<FoodList>(`${this.url}list-food/${food.id}`, {
+      name: food.name, 
+      price: food.price
+    }).pipe(
       res => res,
       error => error
     );

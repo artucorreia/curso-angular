@@ -24,12 +24,12 @@ export class FoodListComponent {
     });
   }
 
-  public editFood(id: number, newFoodName: string, foodPrice: number) {
-    return this.foodListService.editFood(id, newFoodName, foodPrice).subscribe({
+  public editFood(food: FoodList) {
+    return this.foodListService.editFood(food).subscribe({
       next: res => res,
       error: error => error
     });
-  }
+}
 
   public deleteFood(id: number) {
     return this.foodListService.deleteFood(id).subscribe({

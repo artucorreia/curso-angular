@@ -2,18 +2,23 @@
   "list-food": [
     {
       "name": "X Salada",
-      "price": 12,
+      "price": "11",
       "id": 1
     },
     {
-      "name": "X frango",
-      "price": 16,
+      "name": "X Frango",
+      "price": "15",
       "id": 2
     },
     {
-      "name": "X bacon",
-      "price": 18,
+      "name": "X Bacon",
+      "price": "17.99",
       "id": 3
+    },
+    {
+      "name": "Coca 2L",
+      "price": "12",
+      "id": 4
     }
   ]
 }
