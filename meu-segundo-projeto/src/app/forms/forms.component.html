@@ -1,1 +1,24 @@
-<p>forms works!</p>
+<form #form="ngForm">
+    
+    <!-- input text -->
+    <label for="name">Name:</label>
+    <input type="text" name="nome" id="name" ngModel> <br>
+
+    <!-- input radio -->
+    <label>Male:</label>
+    <input type="radio" name="gender" value="male" ngModel> <br>
+    <label>Feminine:</label>
+    <input type="radio" name="gender" value="feminine" ngModel> <br>
+    <label>Other:</label>
+    <input type="radio" name="gender" value="other" id="other" ngModel> <br>
+
+    <!-- input checbox -->
+    <label>Angular:</label>
+    <input type="checkbox" name="angular" ngModel> <br>
+    <label>Vue:</label>
+    <input type="checkbox" name="vue" ngModel> <br>
+    <label>React:</label>
+    <input type="checkbox" name="react" ngModel> <br>
+</form>
+
+{{form.value | json}}
