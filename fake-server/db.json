@@ -9,6 +9,11 @@
       "name": "X salada",
       "price": 15,
       "id": 2
+    },
+    {
+      "name": "gh",
+      "price": 7,
+      "id": 3
     }
   ]
 }

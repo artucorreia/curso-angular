@@ -13,7 +13,7 @@ export class FoodListService {
 
   private url: string = 'http://localhost:3000/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { } 
 
   public foodList(): Observable<FoodList[]> { 
     return this.http.get<FoodList[]>(`${this.url}list-food`).pipe(
@@ -22,10 +22,10 @@ export class FoodListService {
     );
   }
 
-  public addNewFood(newFood: string, priceNewFood: number): Observable<FoodList> { 
+  public addNewFood(foodName: string, foodPrice: number) {
     return this.http.post<FoodList>(`${this.url}list-food`, {
-      name: newFood,
-      price: priceNewFood,
+      name: foodName,
+      price: foodPrice
     }).pipe(
       res => res,
       error => error

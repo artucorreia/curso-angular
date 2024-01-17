@@ -15,7 +15,7 @@ export class FoodListComponent {
 
   ngOnInit(): void {
     this.foodListService.foodList().subscribe({
-      next: (foodList) => this.foodList = foodList,
+      next: foodList => this.foodList = foodList,
       error: error => console.log(error)
     });
 
@@ -24,10 +24,10 @@ export class FoodListComponent {
     });
   }
 
-  testeEdit(id: number ,newName: string) {
-    this.foodListService.editFood(id, newName).subscribe({
-      next: res => console.log(res),
-      error: error => console.log(error)
-    })
-  }
+  // testeEdit(id: number ,newName: string) {
+  //   this.foodListService.editFood(id, newName).subscribe({
+  //     next: res => console.log(res),
+  //     error: error => console.log(error)
+  //   })
+  // }
 }

@@ -12,8 +12,8 @@ export class FoodAddComponent {
   
   constructor(private foodListService: FoodListService) {}
 
-  public addNewFood(newFood: string, priceNewFood: string) {
-    return this.foodListService.addNewFood(newFood, Number(priceNewFood)).subscribe({
+  public addNewFood(foodName: string, foodPrice: string) {
+    return this.foodListService.addNewFood(foodName, Number(foodPrice)).subscribe({
       next: res => console.log(res),
       error: error => console.log(error)
     });
