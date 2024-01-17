@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FoodList } from 'src/app/module/food-list';
+import { Food } from 'src/app/module/food';
 import { FoodListService } from 'src/app/services/food-list.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { FoodListService } from 'src/app/services/food-list.service';
 })
 export class FoodListComponent {
   
-  public foodList: FoodList[] = [];
+  public foodList: Food[] = [];
 
   constructor(private foodListService: FoodListService) {}
 
@@ -24,7 +24,7 @@ export class FoodListComponent {
     });
   }
 
-  public editFood(food: FoodList) {
+  public editFood(food: Food) {
     return this.foodListService.editFood(food).subscribe({
       next: res => res,
       error: error => error

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Event } from '@angular/router';
 import { Observable } from 'rxjs';
-import { FoodList } from '../module/food-list';
+import { Food } from '../module/food';
 
 @Injectable({
   providedIn: 'root'
@@ -15,15 +15,15 @@ export class FoodListService {
 
   constructor(private http: HttpClient) { } 
 
-  public foodList(): Observable<FoodList[]> { 
-    return this.http.get<FoodList[]>(`${this.url}list-food`).pipe(
+  public foodList(): Observable<Food[]> { 
+    return this.http.get<Food[]>(`${this.url}list-food`).pipe(
       res => res,
       error => error
     );
   }
 
-  public addNewFood(foodName: string, foodPrice: number): Observable<FoodList> {
-    return this.http.post<FoodList>(`${this.url}list-food`, {
+  public addNewFood(foodName: string, foodPrice: number): Observable<Food> {
+    return this.http.post<Food>(`${this.url}list-food`, {
       name: foodName,
       price: foodPrice
     }).pipe(
@@ -32,8 +32,8 @@ export class FoodListService {
     );
   }
 
-  public editFood(food: FoodList): Observable<FoodList> {
-    return this.http.put<FoodList>(`${this.url}list-food/${food.id}`, {
+  public editFood(food: Food): Observable<Food> {
+    return this.http.put<Food>(`${this.url}list-food/${food.id}`, {
       name: food.name, 
       price: food.price
     }).pipe(
@@ -42,8 +42,8 @@ export class FoodListService {
     );
   }
 
-  public deleteFood(id: number): Observable<FoodList> {
-    return this.http.delete<FoodList>(`${this.url}list-food/${id}`).pipe(
+  public deleteFood(id: number): Observable<Food> {
+    return this.http.delete<Food>(`${this.url}list-food/${id}`).pipe(
       res => res,
       error => error
     );
