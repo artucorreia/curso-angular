@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-forms',
@@ -24,7 +25,7 @@ export class FormsComponent {
 
   constructor() { }
 
-  public submitForm(form: {}) {
+  public submitForm(form: NgForm) {
     console.log(form);
   }
 }
