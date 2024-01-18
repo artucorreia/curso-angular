@@ -22,11 +22,8 @@
 
     <!-- select -->
     <select name="food" ngModel>
-        <option value="">Selecione um alimento</option>
-        <option value="X-Salada">X-Salada</option>
-        <option value="X-Bacon">X-Bacon</option>
-        <option value="X-Frango">X-Frango</option>
-        <option value="X-Carne">X-Carne</option>
+        <option value="">Selecione um lanche</option>
+        <option *ngFor="let food of foods" [ngValue]="food">{{food.name}}</option>
     </select>
 
     <div>
