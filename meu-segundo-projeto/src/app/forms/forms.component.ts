@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class FormsComponent {
 
+  public submitForm(form: {}) {
+    console.log(form);
+  }
 }

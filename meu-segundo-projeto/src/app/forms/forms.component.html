@@ -19,6 +19,19 @@
     <input type="checkbox" name="vue" ngModel> <br>
     <label>React:</label>
     <input type="checkbox" name="react" ngModel> <br>
+
+    <!-- select -->
+    <select name="food" ngModel>
+        <option value="">Selecione um alimento</option>
+        <option value="X-Salada">X-Salada</option>
+        <option value="X-Bacon">X-Bacon</option>
+        <option value="X-Frango">X-Frango</option>
+        <option value="X-Carne">X-Carne</option>
+    </select>
+
+    <div>
+        <button (click)="submitForm(form.value)">SUBMIT</button>
+    </div>
 </form>
 
 {{form.value | json}}
