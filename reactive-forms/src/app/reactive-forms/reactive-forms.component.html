@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+    <label for="">Name:</label>
+    <input type="text" formControlName="firstName"> {{form.get('firstName')?.value}} <br>
+
+    <label for="">Last Name:</label>
+    <input type="text" formControlName="lastName"> {{form.get('lastName')?.value}} <br>
+
+    <label for="">Email:</label>
+    <input type="text" formControlName="email"> {{form.get('email')?.value}} <br>
+
+    <label for="">Age:</label>
+    <input type="number" formControlName="age"> {{ form.get('age')?.value }} <br>
+
+    <button>SUBMIT</button>
+</form>
