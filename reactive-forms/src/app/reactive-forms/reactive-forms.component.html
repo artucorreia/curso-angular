@@ -1,15 +1,25 @@
 <form [formGroup]="form" (ngSubmit)="submitForm()">
-    <label for="">Name:</label>
-    <input type="text" formControlName="firstName"> {{form.get('firstName')?.value}} <br>
+    <div>
+        <label for="">Name:</label>
+        <input type="text" formControlName="firstName">
+    </div>
 
-    <label for="">Last Name:</label>
-    <input type="text" formControlName="lastName"> {{form.get('lastName')?.value}} <br>
+    <div>
+        <label for="">Last Name:</label>
+        <input type="text" formControlName="lastName">
+    </div>
 
-    <label for="">Email:</label>
-    <input type="text" formControlName="email"> {{form.get('email')?.value}} <br>
+    <div>
+        <label for="">Email:</label>
+        <input type="text" formControlName="email">
+    </div>
 
-    <label for="">Age:</label>
-    <input type="number" formControlName="age"> {{ form.get('age')?.value }} <br>
+    <div>
+        <label for="">Age:</label>
+        <input type="number" formControlName="age">
+    </div>
 
-    <button>SUBMIT</button>
+    <div>
+        <button>SUBMIT</button>
+    </div>
 </form>
