@@ -6,12 +6,12 @@
 
     <div>
         <label for="">Last Name:</label>
-        <input type="text" formControlName="lastName">
+        <input type="text" formControlName="lastName"> {{ form.get('lastName')?.errors | json}}
     </div>
 
     <div>
         <label for="">Email:</label>
-        <input type="text" formControlName="email">
+        <input type="text" formControlName="email"> {{ form.get('email')?.errors | json }}
     </div>
 
     <div>
@@ -20,6 +20,7 @@
     </div>
 
     <div>
-        <button>SUBMIT</button>
+        <button [disabled]="form.invalid">SUBMIT</button>
     </div>
+    {{ form.valid | json }}
 </form>

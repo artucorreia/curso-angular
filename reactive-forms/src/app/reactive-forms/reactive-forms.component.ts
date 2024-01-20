@@ -8,17 +8,19 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ReactiveFormsComponent {
 
-  public form: FormGroup = this.formBuilder.group({
-    firstName: ['', Validators.required],
-    lastName: [''],
-    email: [''],
-    age: ['']
+  public form: FormGroup = this.formBuilder.group({ 
+    firstName: ['', [Validators.required, Validators.minLength(3)]],
+    lastName: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email, Validators.minLength(11)]],
+    age: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(2)]]
   });
 
   constructor(private formBuilder: FormBuilder) { }
 
-  submitForm() {
-    console.log(this.form);
-    console.log(this.form.value);
+  public submitForm() {
+    if(this.form.valid) {
+      console.log(this.form);
+      console.log(this.form.value);
+    }
   }
 }
