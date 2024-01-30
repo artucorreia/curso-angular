@@ -1,9 +1,15 @@
 <header>
     <nav>
         <ul>
-            <li> <a routerLink="/">home</a>
-            <li> <a routerLink="/about">about</a>
-            <li> <a routerLink="['/404']">page-error</a>
+            <li> 
+                <a routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">home</a>
+            </li>
+            <li> 
+                <a routerLink="/about" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">about</a> 
+            </li>
+            <li> 
+                <a routerLink="/404" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">page-error</a>
+            </li>
         </ul>
     </nav>
 </header>
