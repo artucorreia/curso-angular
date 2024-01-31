@@ -7,10 +7,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { PageErrorComponent } from './pages/page-error/page-error.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent, pathMatch: 'full'},
-  {path: 'about', component: AboutComponent},
-  {path: '404', component: PageErrorComponent},
-  {path: '**', redirectTo: '404'}
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'about', component: AboutComponent },
+  { path: '404', component: PageErrorComponent },
+  { path: '**', redirectTo: '404' }
 ];
 
 @NgModule({
