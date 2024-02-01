@@ -10,9 +10,9 @@ export class PageErrorComponent {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    setInterval(()=> {
-      this.router.navigate(['/']);
-      // this.router.navigateByUrl('/');
-    }, 5000)
+    // setInterval(()=> {
+    //   this.router.navigate(['/']);
+    //   this.router.navigateByUrl('/');
+    // }, 5000)
   }
 }
