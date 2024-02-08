@@ -32,4 +32,16 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('teste-unitario app is running!');
   });
+
+  it(`testando função soma()`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.soma(10, 10)).toEqual(20);
+  });
+
+  it(`testando função soma() dando valor errado`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.soma(10, 10)).not.toEqual(30);
+  });
 });
