@@ -1,0 +1,18 @@
+<div>
+    <p>
+        <strong>Olá, Arthur Correia</strong> <br>
+        Ag: 9999, Co: 999999-9
+    </p>
+</div>
+
+<div>
+    <p>poupança: R$ {{ getSavings }}</p>
+    <input type="text" #inputWithdraw>
+    <button (click)="withdrawMoney(inputWithdraw.value)"> Sacar </button>
+</div>
+
+<div>
+    <p>carteira: R$ {{ getBalance }}</p>
+    <input type="text" #inputDeposit>
+    <button (click)="depositMoney(inputDeposit.value)"> Depositar </button>
+</div>
