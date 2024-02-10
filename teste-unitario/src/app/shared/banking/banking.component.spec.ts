@@ -36,13 +36,10 @@ describe('BankingComponent', () => {
   it('(U) withdrawMoney(): should have return = undefined', () => {
     expect(component.withdrawMoney('10a')).toBe(undefined);
     expect(component.withdrawMoney('-10')).toBe(undefined);
+    expect(component.withdrawMoney('20')).not.toBeTruthy();
   });
 
-  it('(U) withdrawMoney(): should have return != undefined', () => {
-    expect(component.withdrawMoney('10')).not.toBe(undefined);
-  });
-
-  it('(U) withdrawMoney(): should transfer savings from balance', () => {
+  it('(U) withdrawMoney(): should transfer from savings to balance', () => {
     component.withdrawMoney('10');
     expect(component.getSavings).toEqual(0);
     expect(component.getBalance).toEqual(60);
@@ -53,13 +50,10 @@ describe('BankingComponent', () => {
   it('(U) depositMoney(): should have return = undefined', () => {
     expect(component.depositMoney('10a')).toBe(undefined);
     expect(component.depositMoney('-10')).toBe(undefined);
+    expect(component.depositMoney('60')).not.toBeTruthy();
   });
 
-  it('(U) depositMoney(): should have return != undefined', () => {
-    expect(component.depositMoney('10')).not.toBe(undefined);
-  });
-
-  it('(U) depositMoney(): should transfer balance from savings', () => {
+  it('(U) depositMoney(): should transfer from balance to savings', () => {
     component.depositMoney('50');
     expect(component.getBalance).toEqual(0)    
     expect(component.getSavings).toEqual(60)    
