@@ -6,13 +6,13 @@
 </div>
 
 <div>
-    <p>poupança: R$ {{ getSavings }}</p>
-    <input type="text" #inputWithdraw>
-    <button (click)="withdrawMoney(inputWithdraw.value)"> Sacar </button>
+    <p>poupança: R$ <span id="get-savings">{{ getSavings }}</span></p>
+    <input id="input-savings" type="text" #inputWithdraw>
+    <button id="withdraw" (click)="withdrawMoney(inputWithdraw.value)"> Sacar </button>
 </div>
 
 <div>
-    <p>carteira: R$ {{ getBalance }}</p>
-    <input type="text" #inputDeposit>
-    <button (click)="depositMoney(inputDeposit.value)"> Depositar </button>
+    <p>carteira: R$ <span id="get-balance">{{ getBalance }}</span></p>
+    <input id="input-balance" type="text" #inputDeposit>
+    <button id="deposit" (click)="depositMoney(inputDeposit.value)"> Depositar </button>
 </div>
