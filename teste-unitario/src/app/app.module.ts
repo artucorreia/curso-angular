@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { BankingComponent } from './shared/banking/banking.component';
 import { ListComponent } from './shared/investiments/components/list/list.component';
 
+// HttpCLientModule
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +17,8 @@ import { ListComponent } from './shared/investiments/components/list/list.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

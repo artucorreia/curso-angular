@@ -21,7 +21,7 @@ describe('ListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('(U) shoul list investiments', () => {
+  it('(U) should list investiments', () => {
     let investiments = component.investiments;
     expect(investiments).toBeTruthy();
     expect(investiments.length).toEqual(4);
@@ -29,5 +29,10 @@ describe('ListComponent', () => {
     expect(investiments[3]).toEqual({name: 'Inter', value: 100});
   });
 
-  // it
+  it('(I) should list investiments', ()=> {
+    let investiments = fixture.debugElement.nativeElement.querySelectorAll('.item');
+    expect(investiments.length).toBe(4);
+    expect(investiments[0].textContent.trim()).toContain('Itaú | 100');
+    expect(investiments[3].textContent.trim()).toContain('Inter | 100');
+  });
 });

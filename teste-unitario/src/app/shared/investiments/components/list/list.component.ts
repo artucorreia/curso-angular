@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 // Model
 import { Investiments } from '../../model/investiments';
+import { ListInvestimentsService } from '../../services/list-investiments.service';
 
 @Component({
   selector: 'app-list',
@@ -10,24 +11,14 @@ import { Investiments } from '../../model/investiments';
 })
 export class ListComponent {
   
-  public investiments: Investiments[] = [
-    {
-    'name': 'Itaú',
-    'value': 100
-    },
-    {
-    'name': 'Will',
-    'value': 100
-    },
-    {
-    'name': 'Nubank',
-    'value': 100
-    },
-    {
-    'name': 'Inter',
-    'value': 100
-    }
-  ];
+  public investiments: Investiments[] = [];
 
-  constructor() { }
+  constructor(private listInvestimentsService: ListInvestimentsService) { }
+
+  ngOnInit() {
+    this.listInvestimentsService.listInvestiments().subscribe({
+      next: (listInvestiments) => this.investiments = listInvestiments,
+      error: error => console.log(error)
+    });
+  }
 }
