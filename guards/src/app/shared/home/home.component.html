@@ -1,0 +1,15 @@
+<h1>Home</h1>
+<div>
+    <label for="login">Login</label>
+    <input type="text" id="login" [(ngModel)]="login">
+</div>
+<div>
+    <label for="password">Senha</label>
+    <input type="text" id="password" [(ngModel)]="password">
+</div>
+
+<div>
+    <a routerLink="account" [queryParams]="{account: login, password: password}">
+        <button>ENTRAR</button>
+    </a>
+</div>
