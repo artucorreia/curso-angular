@@ -15,6 +15,9 @@ export class CanActivateGuard {
     | boolean 
     | UrlTree {
 
+    console.log(route);
+    console.log(state);
+
     if (
       route.queryParams['account'] === 'admin' &&
       route.queryParams['password'] === '1234'
