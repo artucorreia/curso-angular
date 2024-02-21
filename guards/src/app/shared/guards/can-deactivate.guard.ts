@@ -3,7 +3,7 @@ import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/r
 import { Observable } from 'rxjs';
 
 // Component
-import { AccountComponent } from '../account/account.component';
+import { AccountComponent } from '../pages/account/account.component';
 
 @Injectable({
   providedIn: 'root'
@@ -17,9 +17,10 @@ export class CanDeactivateGuard {
     | Promise<boolean | UrlTree> 
     | boolean 
     | UrlTree {
-    
-    console.log(component);
-    return true;
+    console.log(currentRoute);
+    console.log(currentState);
+    console.log(nextState);
+    return component.exit();
   }
   
 }
