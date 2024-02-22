@@ -13,3 +13,12 @@
         <button>ENTRAR</button>
     </a>
 </div>
+
+<ul>
+    <li>
+        <a routerLink="core" [queryParams]="{account: 'admin', password: '1234'}"> Dashboard </a>
+    </li>
+    <li>
+        <a routerLink="core/leads" [queryParams]="{account: 'admin', password: '1234'}"> Leads </a>
+    </li>
+</ul>

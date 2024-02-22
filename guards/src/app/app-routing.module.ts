@@ -4,8 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 // Componente Pages
 import { HomeComponent } from './shared/pages/home/home.component';
 import { AccountComponent } from './shared/pages/account/account.component';
+
+// Guards
 import { CanActivateGuard } from './shared/guards/can-activate.guard';
 import { CanDeactivateGuard } from './shared/guards/can-deactivate.guard';
+import { CanLoadGuard } from './shared/guards/can-load.guard';
+import { CanActivateChildGuard } from './shared/guards/can-activate-child.guard';
 
 const routes: Routes = [
   {
@@ -20,8 +24,10 @@ const routes: Routes = [
     canDeactivate: [CanDeactivateGuard]
   },
   {
-    path: 'home',
-    loadChildren: () => import('./core/core.module').then(m => m.CoreModule)
+    path: 'core',
+    loadChildren: () => import('./core/core.module').then(m => m.CoreModule),
+    canLoad: [CanLoadGuard],
+    canActivateChild: [CanActivateChildGuard]
   }
 ];
 
